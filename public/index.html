@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stone Paper Scissors Multiplayer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Stone Paper Scissors Multiplayer</h1>
+        <div id="login">
+            <input type="text" id="username" placeholder="Enter your username">
+            <button id="join-btn">Join Game</button>
+        </div>
+        <div id="game" style="display: none;">
+            <div class="choices">
+                <button class="choice" data-choice="stone">🪨 Stone</button>
+                <button class="choice" data-choice="paper">📄 Paper</button>
+                <button class="choice" data-choice="scissors">✂️ Scissors</button>
+            </div>
+            <div class="result">
+                <p id="result-text"></p>
+                <div id="players"></div>
+            </div>
+        </div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
